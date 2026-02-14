@@ -14,7 +14,11 @@
 set -e
 
 sudo pacman -S --noconfirm pulseaudio
-pulseaudio -D --disable-shm --exit-idle-time=-1
+groupadd -r pulse 2>/dev/null
+useradd -r -g pulse -G audio -d /var/run/pulse -s /usr/bin/nologin pulse 2>/dev/null
+mkdir -p /var/run/pulse
+chown pulse:pulse /var/run/pulse
+pulseaudio --system --daemonize --disable-shm --exit-idle-time=-1 2>/dev/null
 
 ARCH="$(uname -m)"
 TMPDIR=${TMPDIR:-/tmp}
