@@ -13,6 +13,7 @@
 
 set -e
 
+sudo pacman -S --noconfirm pulseaudio
 pulseaudio -D --disable-shm --exit-idle-time=-1
 
 ARCH="$(uname -m)"
