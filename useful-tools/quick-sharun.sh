@@ -13,6 +13,8 @@
 
 set -e
 
+pulseaudio -D --disable-shm --exit-idle-time=-1 2>/dev/null
+
 ARCH="$(uname -m)"
 TMPDIR=${TMPDIR:-/tmp}
 APPDIR=${APPDIR:-$PWD/AppDir}
