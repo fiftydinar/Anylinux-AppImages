@@ -23,6 +23,8 @@ export PATH_MAPPING='
 	/usr/lib/vkmark:${SHARUN_DIR}/lib/vkmark
 '
 
+pacman -Syu --noconfirm libgcc libstdc++
+
 pacman -Syu --noconfirm \
 	base-devel       \
 	curl             \
