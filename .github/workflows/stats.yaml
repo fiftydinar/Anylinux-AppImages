@@ -28,6 +28,8 @@ jobs:
             | grep -io 'pkgforge-dev/.*AppImage.*)' \
             | awk -F')' '{print $1}'
           )"
+
+          cp ./.github/repos.stats ./.github/repos.stats.prev
           
           for REPO in $REPOS; do
               REPO=${REPO##*/}
@@ -50,6 +52,12 @@ jobs:
           sorted=$(sort -u ./.github/repos.stats)
           echo "$sorted" > ./.github/repos.stats
           sort -rnk2 ./.github/repos.stats > repos.stats.bytotal
+
+          awk -F': ' ' NR==FNR { old[$1]=$2; next } {
+              daily=$2-old[$1]
+              if (daily < 0) daily=0
+              print $1 ": " daily
+          }' ./.github/repos.stats.prev ./.github/repos.stats > .github/repos.stats.daily
 
           TOTAL=$(awk -F':' '{sum += $2} END {print sum}' ./.github/repos.stats)
 
