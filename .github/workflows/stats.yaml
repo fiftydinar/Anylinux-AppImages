@@ -51,7 +51,7 @@ jobs:
           
           sorted=$(sort -u ./.github/repos.stats)
           echo "$sorted" > ./.github/repos.stats
-          sort -rnk2 ./.github/repos.stats > repos.stats.bytotal
+          sort -rnk2 ./.github/repos.stats > ./.github/repos.stats.bytotal
 
           awk -F': ' ' NR==FNR { old[$1]=$2; next } {
               daily=$2-old[$1]
