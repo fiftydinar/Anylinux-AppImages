@@ -45,7 +45,7 @@ DeaDBeeF-AppImage: 2042
 Defold-AppImage: 163
 DevilutionX-AppImage-Enhanced: 107
 Discord-AppImage: 1204
-Dolphin-emu-AppImage: 26815
+Dolphin-emu-AppImage: 26814
 Dr-Robotniks-Ring-Racers-AppImage: 179
 Drum-Machine-AppImage: 230
 DuckStation-GPL-AppImage-Enhanced: 40
@@ -134,7 +134,7 @@ PCSX2-AppImage-Enhanced: 39
 PPSSPP-AppImage: 1199
 Perfect-Dark-AppImage: 70
 Phantom-Satellite-AppImage: 53
-Pinta-AppImage: 3517
+Pinta-AppImage: 3515
 Pixelpulse2-AppImage: 218
 Play-AppImage-Enhanced: 93
 PokeMMO-AppImage: 62
@@ -192,11 +192,11 @@ Tutanota-Desktop-AppImage-Enhanced: 348
 Tux-Football-AppImage: 308
 Tuxpuck-AppImage: 246
 UEFITool-AppImage: 169
-UnleashedRecomp-AppImage: 722
-Varia-AppImage: 1362
+UnleashedRecomp-AppImage: 720
+Varia-AppImage: 1360
 VeraCrypt-AppImage: 227
 Viber-AppImage-Enhanced: 917
-Video-Trimmer-AppImage: 720
+Video-Trimmer-AppImage: 718
 Warp-AppImage: 485
 WebCord-AppImage-Enhanced: 49
 Webcamoid-AppImage: 543
@@ -213,7 +213,7 @@ Zen-Browser-AppImage-Enhanced: 18
 Zenity-GTK3-AppImage: 1000
 Zod-Engine-AppImage: 25
 alacritty-AppImage: 3529
-android-tools-AppImage: 2995
+android-tools-AppImage: 2994
 android_translation_layer-AppImage: 1322
 anki-AppImage: 226
 ares-emu-appimage: 5999
@@ -262,7 +262,7 @@ tachoparser-AppImage: 5
 transmission-qt-AppImage: 1042
 uad-ng-AppImage: 465
 vcmi-AppImage: 315
-virt-manager-AppImage: 675
+virt-manager-AppImage: 673
 wine-AppImage: 466
 wipEout-Rewrite-AppImage: 131
 xenia-canary-AppImage: 3049
