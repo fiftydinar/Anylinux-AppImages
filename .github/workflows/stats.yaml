@@ -29,7 +29,7 @@ jobs:
             | awk -F')' '{print $1}'
           )"
 
-          cp ./.github/repos.stats ./.github/repos.stats.prev
+          cp ./.github/repos.stats /tmp/repos.stats.prev
           
           for REPO in $REPOS; do
               REPO=${REPO##*/}
@@ -57,7 +57,7 @@ jobs:
               daily=$2-old[$1]
               if (daily < 0) daily=0
               print $1 ": " daily
-          }' ./.github/repos.stats.prev ./.github/repos.stats > .github/repos.stats.daily
+          }' /tmp/repos.stats.prev ./.github/repos.stats > ./.github/repos.stats.diff
 
           TOTAL=$(awk -F':' '{sum += $2} END {print sum}' ./.github/repos.stats)
 
