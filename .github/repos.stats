@@ -45,7 +45,7 @@ DeaDBeeF-AppImage: 2042
 Defold-AppImage: 163
 DevilutionX-AppImage-Enhanced: 107
 Discord-AppImage: 1204
-Dolphin-emu-AppImage: 26815
+Dolphin-emu-AppImage: 26818
 Dr-Robotniks-Ring-Racers-AppImage: 179
 Drum-Machine-AppImage: 230
 DuckStation-GPL-AppImage-Enhanced: 40
@@ -95,7 +95,7 @@ KeePassXC-AppImage-Enhanced: 5
 Kega-Fusion-AppImage: 66
 Keypunch-AppImage: 209
 KiCad-AppImage: 198
-Kid3-AppImage: 214
+Kid3-AppImage: 215
 Knights-AppImage: 25
 Kronos-AppImage: 439
 Libation-AppImage: 631
@@ -134,7 +134,7 @@ PCSX2-AppImage-Enhanced: 39
 PPSSPP-AppImage: 1199
 Perfect-Dark-AppImage: 70
 Phantom-Satellite-AppImage: 53
-Pinta-AppImage: 3517
+Pinta-AppImage: 3518
 Pixelpulse2-AppImage: 218
 Play-AppImage-Enhanced: 93
 PokeMMO-AppImage: 62
@@ -216,7 +216,7 @@ alacritty-AppImage: 3529
 android-tools-AppImage: 2995
 android_translation_layer-AppImage: 1322
 anki-AppImage: 226
-ares-emu-appimage: 5999
+ares-emu-appimage: 6000
 cursor-cli-AppImage: 393
 dRally-AppImage: 75
 dethrace-AppImage: 168
@@ -224,7 +224,7 @@ dhewm3-AppImage: 169
 dunst-AppImage: 109
 ePSXe-AppImage: 427
 foot-AppImage: 263
-ghostty-appimage: 55123
+ghostty-appimage: 55127
 gnome-pomodoro-appimage: 670
 gpu-screen-recorder-AppImage: 3827
 htop-AppImage: 853
