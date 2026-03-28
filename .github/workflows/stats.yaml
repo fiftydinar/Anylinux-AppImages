@@ -49,7 +49,7 @@ jobs:
           
           sorted=$(sort -u ./.github/repos.stats)
           echo "$sorted" > ./.github/repos.stats
-          sort -rnk2 ./repos.stats > repos.stats.bytotal
+          sort -rnk2 ./.github/repos.stats > repos.stats.bytotal
 
           TOTAL=$(awk -F':' '{sum += $2} END {print sum}' ./.github/repos.stats)
 
