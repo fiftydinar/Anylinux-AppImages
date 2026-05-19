@@ -37,6 +37,7 @@ ANYLINUX_LIB=${ANYLINUX_LIB:-1}
 ANYLINUX_LIB_SOURCE=${ANYLINUX_LIB_SOURCE:-https://raw.githubusercontent.com/pkgforge-dev/Anylinux-AppImages/refs/heads/main/useful-tools/lib/anylinux.c}
 GTK_CLASS_FIX=${GTK_CLASS_FIX:-0}
 GTK_CLASS_FIX_SOURCE=${GTK_CLASS_FIX_SOURCE:-https://raw.githubusercontent.com/pkgforge-dev/Anylinux-AppImages/refs/heads/main/useful-tools/lib/gtk-class-fix.c}
+GLYCIN_FIX_SOURCE=${GLYCIN_FIX_SOURCE:-https://raw.githubusercontent.com/pkgforge-dev/Anylinux-AppImages/refs/heads/main/useful-tools/lib/glycin-fix.c}
 
 DEPLOY_DATADIR=${DEPLOY_DATADIR:-1}
 DEPLOY_LOCALE=${DEPLOY_LOCALE:-1}
@@ -1228,6 +1229,27 @@ _add_anylinux_lib() {
 	fi
 	rm -f "$APPDIR"/bin/xdg-open
 	_echo "* anylinux.so successfully added!"
+}
+
+_add_glycin_fix() {
+	cfile=$APPDIR/.glycin-fix.c
+	target=$DST_LIB_DIR/glycin-fix.so
+
+	if [ "$DEPLOY_GLYCIN" != 1 ]; then
+		return 0
+	elif [ ! -f "$target" ]; then
+		_echo "* Building glycin-fix.so..."
+		_download "$cfile" "$GLYCIN_FIX_SOURCE"
+
+		set -- -shared -fPIC -O2 "$cfile" -o "$target" -ldl
+		if [ "$LIB32" = 1 ]; then
+			set -- -m32 "$@"
+		fi
+		cc "$@"
+	fi
+
+	echo "glycin-fix.so" >> "$APPDIR"/.preload
+	_echo "* glycin-fix.so successfully added!"
 }
 
 _add_gtk_class_fix() {
@@ -2668,6 +2690,7 @@ echo ""
 _check_main_bin
 _map_paths_ld_preload_open
 _map_paths_binary_patch
+_add_glycin_fix
 _add_anylinux_lib
 _deploy_datadir
 _deploy_locale
