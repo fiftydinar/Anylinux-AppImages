@@ -2657,10 +2657,14 @@ _add_apprun() {
 	        export VK_LOADER_DEBUG=all
 	        export LC_ALL=C
 	        export SHARUN_PRINTENV=1
-	        "$@" 2>>"$PWD"/"${APPIMAGE##*/}"-debug.log || :
+	        # fix glib not reading mime.cache in dwarfs
+			[ -f "$APPDIR/share/mime/mime.cache" ] || true
+			"$@" 2>>"$PWD"/"${APPIMAGE##*/}"-debug.log || :
 	        >&2 echo "Debug log at: '$PWD/${APPIMAGE##*/}-debug.log'"
 	else
-	        exec "$@"
+	        # fix glib not reading mime.cache in dwarfs
+			[ -f "$APPDIR/share/mime/mime.cache" ] || true
+			exec "$@"
 	fi
 	EOF
 
